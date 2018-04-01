@@ -4,7 +4,10 @@ import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 export default class App extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {text: ''}
+    this.state = {
+      text: '',
+      places: []
+    }
   }
 
   handleInput = val => {
@@ -13,33 +16,43 @@ export default class App extends React.Component {
     })
   }
 
-  alertInput = () => {
-    Alert.alert('Your message', this.state.text)
+  addToStateAndDisplay = () => {
+    if(this.state.text.trim() === '') return
+    this.setState(prevState => {
+      return {
+        // places: [...prevState.places, ...prevState.text]
+        places: prevState.places.concat(prevState.text)
+      }
+    })
   }
 
   render() {
+    const placesOutput = this.state.places.map(place => (
+      <Text>{place}</Text>
+    ))
     return (
       <View style={styles.container}>
         <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.typeInput}
-            placeholder = 'Type something'
-            value={this.state.text}
-            onChangeText={this.handleInput}
+            <TextInput
+              style={styles.typeInput}
+              placeholder = 'Type something'
+              value={this.state.text}
+              onChangeText={this.handleInput}
             />
-          <Button
-            title='Add'
-            style={styles.inputButton}
-            onPress={this.alertInput}
-          />
-      </View>
-        <Text style={{padding: 10, fontSize: 42}}>
-          {this.state.text}
-        </Text>
+            <Button
+              title='Submit'
+              style={styles.inputButton}
+              onPress={this.addToStateAndDisplay}
+            />
+        </View>
+        <View>
+          {placesOutput}
+        </View>
       </View>
     );
   }
 }
+
 
 const styles = StyleSheet.create({
   container: {

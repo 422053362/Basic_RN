@@ -22,7 +22,7 @@ export default class App extends React.Component {
           onChangeText={this.handleInput}
           />
           <Text style={{padding: 10, fontSize: 42}}>
-           {this.state.text.split(' ').map((word) => word && this.state.text).join(' ')}
+           {this.state.text}
          </Text>
       </View>
     );
@@ -31,11 +31,11 @@ export default class App extends React.Component {
 
 const styles = StyleSheet.create({
   container: {
-    // flex: 1,
-    padding: 20,
+    flex: 1,
+    padding: 30,
     backgroundColor: '#fff',
     alignItems: 'center',
-    justifyContent: 'center',
+    justifyContent: 'flex-start',
   },
 
 

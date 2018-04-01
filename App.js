@@ -1,5 +1,5 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -13,17 +13,29 @@ export default class App extends React.Component {
     })
   }
 
+  alertInput = () => {
+    Alert.alert('Your message', this.state.text)
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <TextInput
-          placeholder = 'Type something'
-          value={this.state.text}
-          onChangeText={this.handleInput}
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={styles.typeInput}
+            placeholder = 'Type something'
+            value={this.state.text}
+            onChangeText={this.handleInput}
+            />
+          <Button
+            title='Add'
+            style={styles.inputButton}
+            onPress={this.alertInput}
           />
-          <Text style={{padding: 10, fontSize: 42}}>
-           {this.state.text}
-         </Text>
+      </View>
+        <Text style={{padding: 10, fontSize: 42}}>
+          {this.state.text}
+        </Text>
       </View>
     );
   }
@@ -38,6 +50,20 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
   },
 
+  inputContainer: {
+    // flex: 1,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
 
+  typeInput: {
+    width: '70%',
+  },
+
+  inputButton: {
+    width: '30%',
+  }
 
 });

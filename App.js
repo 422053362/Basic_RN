@@ -1,8 +1,8 @@
 import React from 'react';
-import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
-import ListItem from './src/components/Listitem/Listitem';
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
+import PlaceList from './src/components/PlaceList/PlaceList';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -22,15 +22,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    const placesOutput = this.state.places.map((place, i) => (
-      <ListItem key={i} placeName={place} />
-    ))
     return (
       <View style={styles.container}>
         <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
-        <View style={styles.listContainer}>
-          {placesOutput}
-        </View>
+        <PlaceList places={this.state.places}/>
       </View>
     );
   }
@@ -45,10 +40,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
-
-  listContainer: {
-    width: '100%',
-
-  }
-
 });

@@ -1,6 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
+import ListItem from './src/components/Listitem/Listitem';
+
 export default class App extends React.Component {
   constructor(props) {
     super(props)

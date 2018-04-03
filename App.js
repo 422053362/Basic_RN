@@ -34,19 +34,6 @@ export default class App extends React.Component {
     ))
     return (
       <View style={styles.container}>
-        <View style={styles.inputContainer}>
-            <TextInput
-              style={styles.typeInput}
-              placeholder = 'Type something'
-              value={this.state.text}
-              onChangeText={this.handleInput}
-            />
-            <Button
-              title='Submit'
-              style={styles.inputButton}
-              onPress={this.addToStateAndDisplay}
-            />
-        </View>
         <View style={styles.listContainer}>
           {placesOutput}
         </View>

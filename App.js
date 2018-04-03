@@ -2,28 +2,21 @@ import React from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Alert } from 'react-native';
 
 import ListItem from './src/components/Listitem/Listitem';
+import PlaceInput from './src/components/PlaceInput/PlaceInput';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      text: '',
       places: []
     }
   }
 
-  handleInput = val => {
-    this.setState({
-      text: val
-    })
-  }
 
-  addToStateAndDisplay = () => {
-    if(this.state.text.trim() === '') return
+  placeAddedHandler = placeName => {
     this.setState(prevState => {
       return {
-        // places: [...prevState.places, ...prevState.text]
-        places: prevState.places.concat(prevState.text)
+        places: prevState.places.concat(placeName)
       }
     })
   }
@@ -34,6 +27,7 @@ export default class App extends React.Component {
     ))
     return (
       <View style={styles.container}>
+        <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
         <View style={styles.listContainer}>
           {placesOutput}
         </View>
@@ -50,22 +44,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'flex-start',
-  },
-
-  inputContainer: {
-    // flex: 1,
-    width: '100%',
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'center'
-  },
-
-  typeInput: {
-    width: '70%',
-  },
-
-  inputButton: {
-    width: '30%',
   },
 
   listContainer: {

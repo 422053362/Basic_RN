@@ -30,7 +30,7 @@ export default class App extends React.Component {
 
   render() {
     const placesOutput = this.state.places.map((place, i) => (
-      <Text key={i}>{place}</Text>
+      <ListItem key={i} placeName={place} />
     ))
     return (
       <View style={styles.container}>
@@ -47,7 +47,7 @@ export default class App extends React.Component {
               onPress={this.addToStateAndDisplay}
             />
         </View>
-        <View>
+        <View style={styles.listContainer}>
           {placesOutput}
         </View>
       </View>
@@ -79,6 +79,11 @@ const styles = StyleSheet.create({
 
   inputButton: {
     width: '30%',
+  },
+
+  listContainer: {
+    width: '100%',
+
   }
 
 });

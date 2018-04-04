@@ -12,7 +12,7 @@ const PlaceList = props => {
   const placesOutput = props.places.map((place, i) => (
     <ListItem
       key={i} placeName={place}
-      onItemPressed={() => alert('Item pressed ' + i)}
+      onItemPressed={() => console.log('item was pressed ', i)}
     />
   ))
   return (

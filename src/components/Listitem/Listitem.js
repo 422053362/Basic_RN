@@ -3,16 +3,16 @@ import {
   View,
   Text,
   StyleSheet,
-  TouchableHighlight
+  TouchableOpacity
 } from 'react-native';
 
 
 const listItem = (props) => (
-  <TouchableHighlight  onPress={props.onItemPressed}>
+  <TouchableOpacity  onPress={props.onItemPressed}>
     <View style={styles.listItem}>
       <Text>{props.placeName}</Text>
     </View>
-  </TouchableHighlight>
+  </TouchableOpacity>
 )
 
 const styles = StyleSheet.create({

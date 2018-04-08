@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
-import placeDetail from './src/components/placeDetail/placeDetail';
+import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
 import placeImage from './src/assets/blue-german-shepherd-pictures-1.jpg';
 
 export default class App extends React.Component {
@@ -47,7 +47,7 @@ export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <placeDetail selectedPlace={this.state.selectedPlace}/>
+        <PlaceDetail selectedPlace={this.state.selectedPlace}/>
         <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
         <PlaceList places={this.state.places}
           onItemSelected={this.placeSelectedHandler}

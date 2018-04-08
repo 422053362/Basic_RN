@@ -4,7 +4,8 @@ import {
   View,
   Image,
   Text,
-  Button
+  Button,
+  StyleSheet
   } from 'react-native'
 
 const PlaceDetail = props => {
@@ -20,15 +21,21 @@ const PlaceDetail = props => {
 
   return (
     <Modal>
-      <View>
+      <View style={styles.modalContainer}>
         {modalContent}
         <View>
-          <Button title='Delete'/>
+          <Button title='Delete' color='red'/>
           <Button title='Close'/>
         </View>
       </View>
     </Modal>
   )
 }
+
+const styles = StyleSheet.create({
+  modalContainer: {
+    margin: 22
+  }
+})
 
 export default PlaceDetail;

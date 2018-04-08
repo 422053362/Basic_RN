@@ -14,7 +14,7 @@ const PlaceDetail = props => {
     modalContent = (
       <View>
         <Image source={props.selectedPlace.image} style={styles.placeImage} />
-        <Text>{props.selectedPlace.name}</Text>
+        <Text style={styles.placeName}>{props.selectedPlace.name}</Text>
       </View>
     )
   }
@@ -39,6 +39,11 @@ const styles = StyleSheet.create({
   placeImage: {
     width: '100%',
     height: 200
+  },
+  placeName: {
+    fontWeight: 'bold',
+    textAlign: 'center',
+    fontSize: 20,
   }
 })
 

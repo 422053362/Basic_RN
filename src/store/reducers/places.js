@@ -15,38 +15,40 @@ const reducer = (state = initialState, action) => {
   switch (action.type) {
     case ADD_PLACE:
       return {
-        ...state,
-        places: prevState.places.concat({
-          key: Math.random(),
-          name: action.placeName,
-          image: placeImage
+          ...state,
+          places: state.places.concat({
+            key: Math.random(),
+            name: action.placeName,
+            image: placeImage,
+        })
       };
 
-      case DELETE_PLACE:
-      return {
-        ...state,
-        places: state.places.filter(place  => {
-          return  place.key !== state.selectedPlace.key;
-        }),
-        selectedPlace: null
-      }
+    case DELETE_PLACE:
+    return {
+      ...state,
+      places: state.places.filter(place  => {
+        return  place.key !== state.selectedPlace.key;
+      }),
+      selectedPlace: null
+    }
 
-      case SELECT_PLACE:
-        return {
+    case SELECT_PLACE:
+      return {
           ...state,
           selectedPlace: state.places.find(place => {
             return place.key === action.placeKey
-        }
+        })
+      }
 
-      case DESELECT_PLACE:
-        return {
-          ...state,
-          selectedPlace: null
-        }
+    case DESELECT_PLACE:
+      return {
+        ...state,
+        selectedPlace: null
+      }
 
     default:
-      state;
+      return state;
   }
 }
 
-export defaul reducer;
+export default reducer;

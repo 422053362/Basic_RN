@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  View,
+  ScrollView,
   StyleSheet,
   Alert
 } from 'react-native';
@@ -16,9 +16,9 @@ const PlaceList = props => {
     />
   ))
   return (
-    <View style={styles.listContainer}>
+    <ScrollView style={styles.listContainer}>
       {placesOutput}
-    </View>
+    </ScrollView>
   )
 }
 

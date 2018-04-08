@@ -20,7 +20,10 @@ const PlaceDetail = props => {
   }
 
   return (
-    <Modal visible={props.selectedPlace !== null} animationType='slide'>
+    <Modal
+      onRequestClose={props.onModalClosed}
+      visible={props.selectedPlace !== null}
+      animationType='slide'>
       <View style={styles.modalContainer}>
         {modalContent}
         <View>
@@ -34,11 +37,11 @@ const PlaceDetail = props => {
 
 const styles = StyleSheet.create({
   modalContainer: {
-    margin: 22
+    margin: 25
   },
   placeImage: {
     width: '100%',
-    height: 200
+    height: 350,
   },
   placeName: {
     fontWeight: 'bold',

@@ -3,13 +3,15 @@ import { StyleSheet, View } from 'react-native';
 
 import PlaceInput from './src/components/PlaceInput/PlaceInput';
 import PlaceList from './src/components/PlaceList/PlaceList';
-import placeImage from './src/assets/blue-german-shepherd-pictures-1.jpg'
+import placeDetail from './src/components/placeDetail/placeDetail';
+import placeImage from './src/assets/blue-german-shepherd-pictures-1.jpg';
 
 export default class App extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      places: []
+      places: [],
+      selectedPlace: null,
     }
   }
 
@@ -25,22 +27,30 @@ export default class App extends React.Component {
     })
   }
 
-  placeDeleteHandler = key => {
+  placeSelectedHandler = key => {
     this.setState(prevState => {
       return {
-        places: prevState.places.filter(place  => {
-          return  place.key !== key;
+        selectedPlace: prevState.places.find(place => {
+          return place.key === key
         })
       }
     })
+    // this.setState(prevState => {
+    //   return {
+    //     places: prevState.places.filter(place  => {
+    //       return  place.key !== key;
+    //     })
+    //   }
+    // })
   }
 
   render() {
     return (
       <View style={styles.container}>
+        <placeDetail selectedPlace={this.state.selectedPlace}/>
         <PlaceInput onPlaceAdded={this.placeAddedHandler}/>
         <PlaceList places={this.state.places}
-          onItemDeleted={this.placeDeleteHandler}
+          onItemSelected={this.placeSelectedHandler}
         />
       </View>
     );

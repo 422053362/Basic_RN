@@ -1,8 +1,8 @@
-import { createStore, combineReducer } from 'redux'
-import placesReducers from './reducers/places';
+import { createStore, combineReducers } from 'redux'
+import placesReducer from './reducers/places';
 
-const rootReducer = combineReducer({
-  places: placesReducers
+const rootReducer = combineReducers({
+  places: placesReducer
 })
 
 

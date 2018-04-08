@@ -20,7 +20,7 @@ const PlaceDetail = props => {
   }
 
   return (
-    <Modal>
+    <Modal visible={props.selectedPlace !== null}>
       <View style={styles.modalContainer}>
         {modalContent}
         <View>

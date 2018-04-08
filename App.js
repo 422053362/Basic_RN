@@ -9,7 +9,7 @@ import placeImage from './src/assets/blue-german-shepherd-pictures-1.jpg';
 import {
   addPlace,
   deletePlace,
-  selectedPlace,
+  selectPlace,
   deselectPlace
 } from './src/store/actions/index';
 
@@ -70,7 +70,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onAddPlace: (name) => dispatch(addPlace(name)),
     onDeletePlace: () => dispatch(deletePlace()),
-    onSelectPlace: (key) => dispatch(selectedPlace(key)),
+    onSelectPlace: (key) => dispatch(selectPlace(key)),
     onDeselectPlace: () => dispatch(deselectPlace())
   }
 }

@@ -10,23 +10,23 @@ import ListItem from '../Listitem/Listitem';
 
 
 const PlaceList = props => {
-  const placesOutput = props.places.map((place, i) => (
-    <ListItem
-      key={i} placeName={place}
-      onItemPressed={() => props.onItemDeleted(i)}
-    />
-  ))
   return (
-    <FlatList style={styles.listContainer}>
-      {placesOutput}
-    </FlatList>
+    <FlatList
+      style={styles.listContainer}
+      data={props.places}
+      renderItem={(info) => (
+        <ListItem
+          placeName={info.item.value}
+          onItemPressed={() => props.onItemDeleted(info.item.key)}
+        />
+      )}
+    />
   )
 }
 
 const styles = StyleSheet.create({
   listContainer: {
     width: '100%',
-
   }
 })
 

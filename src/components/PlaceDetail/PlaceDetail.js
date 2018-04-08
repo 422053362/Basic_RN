@@ -20,7 +20,7 @@ const PlaceDetail = props => {
   }
 
   return (
-    <Modal visible={props.selectedPlace !== null}>
+    <Modal visible={props.selectedPlace !== null} animationType='slide'>
       <View style={styles.modalContainer}>
         {modalContent}
         <View>

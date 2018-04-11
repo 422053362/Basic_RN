@@ -4,7 +4,7 @@ import {
   Text
 } from 'react-native';
 
-class FindPlace extends Component {
+class FindPlaceScreen extends Component {
   render() {
     return (
       <View>
@@ -14,4 +14,4 @@ class FindPlace extends Component {
   }
 }
 
-export default FindPlace;
+export default FindPlaceScreen;

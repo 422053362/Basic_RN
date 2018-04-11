@@ -4,11 +4,11 @@ import {
   Text
 } from 'react-native';
 
-class SharePlace extends Component {
+class SharePlaceScreen extends Component {
   render() {
     return (
       <View>
-        <Text>On SharePlace screen</Text>
+        <Text>On SharePlaceScreen screen</Text>
       </View>
     );
   }

@@ -1,0 +1,37 @@
+dependencies: \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCViewController.m \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCViewController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridge.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeDelegate.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTJavaScriptLoader.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTDefines.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBridgeModule.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTFrameUpdate.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTInvalidating.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCNavigationController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCTabBarController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/RCCDrawerController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/MMDrawerController/MMDrawerController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/RCCDrawerProtocol.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/RCCTheSideBarManagerViewController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/TheSidebarController/TheSidebarController.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCDrawerController/TheSidebarController/Animations/SidebarAnimation.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootView.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCManager.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTConvert.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAnimationType.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTBorderStyle.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTLog.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTAssert.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTUtils.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTPointerEvents.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTTextDecorationLineType.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/Yoga.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGEnums.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/yoga/YGMacros.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTEventDispatcher.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCExternalViewControllerProtocol.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/Helpers/RCTHelpers.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/Helpers/RCCTitleViewHelper.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/node_modules/react-native-navigation/ios/RCCCustomTitleView.h \
+  /Users/gurdipsingh/Documents/Projects/basic_rn/ios/build/Build/Products/Debug-iphonesimulator/include/React/RCTRootViewDelegate.h

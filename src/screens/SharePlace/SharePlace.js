@@ -14,4 +14,4 @@ class SharePlaceScreen extends Component {
   }
 }
 
-export default SharePlace;
+export default SharePlaceScreen;
